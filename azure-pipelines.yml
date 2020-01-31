@@ -24,10 +24,10 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
   inputs:
-    contents: '/home/vsts/work/1/s/MSA_Product/target/product-1.0.0-BUILD-SNAPSHOT.war'
+    contents: '/home/vsts/work/1/s/MSA_Product/target/**'
     targetFolder: $(Build.ArtifactStagingDirectory)
 
 - task: PublishBuildArtifacts@1
   inputs:
     pathToPublish: $(Build.ArtifactStagingDirectory)
-    artifactName: _seojinAhn.sptekProduct
+    artifactName: drop

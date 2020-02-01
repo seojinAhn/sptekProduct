@@ -32,3 +32,8 @@ steps:
     pathToPublish: $(Build.ArtifactStagingDirectory)
     artifactName: drop
 
+- task: AzureAppServiceSettings@1
+  inputs:
+    azureSubscription: '무료 체험(1)(0a756468-438e-4941-8c0f-83f697769027)'
+    appName: 'sptek-product'
+    resourceGroupName: 'myResourceGroup'

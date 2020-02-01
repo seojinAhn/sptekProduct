@@ -37,3 +37,12 @@ steps:
     azureSubscription: '무료 체험(1)(0a756468-438e-4941-8c0f-83f697769027)'
     appName: 'sptek-product'
     resourceGroupName: 'myResourceGroup'
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: '무료 체험(1)(0a756468-438e-4941-8c0f-83f697769027)'
+    appType: 'webAppLinux'
+    WebAppName: 'sptek-product'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.war'
+    RuntimeStack: 'TOMCAT|8.5-jre8'
